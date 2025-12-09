@@ -18,7 +18,7 @@ console.log("Token loaded:", PRIVATE_APP_ACCESS);
 app.get("/", async (req, res) => {
     try {
         const response = await axios.get(
-            `https://api.hubapi.com/crm/v3/objects/p_pets?limit=100`,
+            `https://api.hubapi.com/crm/v3/objects/p_pets?limit=100&properties=name,age,color,category`,
             {
                 headers: {
                     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`
